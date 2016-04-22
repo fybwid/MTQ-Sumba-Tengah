@@ -121,19 +121,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="content">
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             <section data-route="home" tabindex="-1">
+              <!--
               <paper-material elevation="1">
                 <my-greeting></my-greeting>
 
-                <p class="subhead">You now have:</p>
+                <p class="subhead">Saat ini Anda berada di Beranda MTQ Sumba Tengah:</p>
                 <my-list></my-list>
-
                 <p>Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
               </paper-material>
-<!--
+              -->
+              <div class="horizontal">
+                <paper-card heading="Tilawah Al-Qur’an" image="images/touch/chrome-touch-icon-192x192.png" style="margin-left:4px; margin-right:4px; margin-top:4px; margin-bottom:0px; width: 300px;">
+                  <div class="card-actions horizontal justified">
+                    <a>Lihat detil kegiatan <paper-icon-button icon="launch"></paper-icon-button></a>
+                  </div>
+                </paper-card>
+                <paper-card heading="Tartil Al-Qur’an" image="images/touch/chrome-touch-icon-192x192.png" style="margin-left:4px; margin-right:4px; margin-top:4px; margin-bottom:0px; width: 300px;">
+                  <div class="card-actions horizontal justified">
+                    <a>Lihat detil kegiatan <paper-icon-button icon="launch"></paper-icon-button></a>
+                  </div>
+                </paper-card>
+                <paper-card heading="Fahmil Al-Qur’an" image="images/touch/chrome-touch-icon-192x192.png" style="margin-left:4px; margin-right:4px; margin-top:4px; margin-bottom:0px; width: 300px;">
+                  <div class="card-actions horizontal justified">
+                    <a>Lihat detil kegiatan <paper-icon-button icon="launch"></paper-icon-button></a>
+                  </div>
+                </paper-card>
+              </div>
+
+
+              <!--
               <paper-material elevation="1">
                 <p>This is another card.</p>
               </paper-material>
---><!--
+              -->
+              <!--
               <paper-material elevation="1">
                 <h2 id="license">License</h2>
                 <p>Everything in this repo is BSD style license unless otherwise specified.</p>
@@ -185,13 +206,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
       </paper-scroll-header-panel>
     </paper-drawer-panel>
-
+<paper-toast id="toast" class="fit-bottom" text="Selamat datang di Website MTQ Sumba Tengah." opened duration="0">
+  <paper-icon-button onclick="toast.toggle()" icon="thumb-up"></paper-icon-button>
+</paper-toast>
+<!--
     <paper-toast id="toast">
       <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
     </paper-toast>
-
+-->
     <!-- Uncomment next block to enable Service Worker support (1/2) -->
-
+    <!--
     <paper-toast id="caching-complete"
                  duration="6000"
                  text="Proses Cache selesai! Website tetap dapat digunakan meski tanpa jaringan internet (offline).">
@@ -206,7 +230,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                          cache-config-file="cache-config.json">
       </platinum-sw-cache>
     </platinum-sw-register>
-
+-->
 
   </template>
 
