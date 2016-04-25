@@ -93,14 +93,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Informasi</span>
           </a>
 
-          <a data-route="lokasi" href="{{baseUrl}}lokasi">
-            <iron-icon icon="maps:place"></iron-icon>
-            <span>Lokasi</span>
+          <a data-route="jadwal" href="{{baseUrl}}jadwal">
+            <iron-icon icon="date-range"></iron-icon>
+            <span>Jadwal</span>
           </a>
 
           <a data-route="kontak" href="{{baseUrl}}kontak">
             <iron-icon icon="communication:contacts"></iron-icon>
             <span>Kontak</span>
+          </a>
+
+          <a data-route="lokasi" href="{{baseUrl}}lokasi">
+            <iron-icon icon="maps:place"></iron-icon>
+            <span>Lokasi</span>
           </a>
         </paper-menu>
       </paper-scroll-header-panel>
@@ -190,37 +195,52 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="informasi" tabindex="-1">
               <paper-material elevation="1">
                 <template is="dom-bind">
-            <paper-tabs selected="{{selected}}" scrollable>
-              <paper-tab><h2>Tujuan</h2></paper-tab>
-              <paper-tab><h2>Latar Belakang</h2></paper-tab>
-              <paper-tab><h2>Dasar Hukum</h2></paper-tab>
-            </paper-tabs>
-            <iron-pages selected="{{selected}}">
-              <div>
-                <p>Musabaqah Tilawatil Qur’an atau lomba membaca Al-quran dengan lagu yang selama ini sudah dikenal. MTQ telah ada di Indonesia sejak tahun 1940-an sejak berdirinya Jami’iyyatul Qurro wal Huffadz yang didirikan oleh Nahdlatul Ulama, ormas terbesar di Indonesia.</p>
-                <p>Sejak tahun 1968, saat Menteri Agama dihabat K.H. Muhammad Dahlan (salah seorang ketua Pengurus Besar Nahdlatul Ulama) MTQ dilembagakan secara nasional. MTQ pertama diselenggarakan di Makassar pada bulan Ramadan tahun 1968. Kala itu hanya melombagakan tilawah dewasa saja dan melahirkan Qari Ahmad Syahid dari Jawa Barat dan Muhammadong dari Sulawesi Selatan. MTQ kedua diselenggarakan di Banjarmasin tahun 1969. Tahun 1970 MTQ ketiga diselenggarakan di Jakarta dengan acara yang sangat meriah.</p>
-                <p>Al-qur’an adalah wahyu Allah yang diturunkan kepada Nabi Muhammad SAW beserta umatnya dan merupakan bacaan utama bagi umat muslim di seluruh jagat raya. Al-Qur’an ini sebagai petunjuk bagi umat Islam dalam beribadah kepadaNya. Isi Al-Qur’an merupakan penyempurnaan wahyu Allah sebelumnya dimana isinya  menyangkut hubungan manusia dengan Allah, manusia dengan sesama manusia dan juga manusia dengan lingkungannya. Hal –hal mengenai tauhid, akidah, ahklak dan fikih semuanya terkandung dalam Al-qur’an.</p>
-                <p>Pada era globalisasi ini, Al-qur’an yang begitu indah bacaannya sudah mulai dilupakan orang, sekarang orang lebih memilih membaca buku ilmu pengetahuan modern atau novel daripada membaca Al-Qur’an. Globalisasi telah merubahgayahidup bangsa kita terutama generasi muda, maka Lembaga Pengembangan Tilawahtil Qur’an Kabupaten Sumba Tengah  ingin mengembalikangayahidup generasi muda kita untuk kembali memcintai Al-Qur’an dan tetap berpegang teguh padanya. Salah satu upaya yang dapat dilakukan  adalah melaksanakan  Musabaqah Tilawatil Qur’an.</p>
-              </div>
-              <div>
-                <table>
-                  <tr>
-                    <td>1. </td>
-                    <td>2. </td>
-                    <td>3. </td>
-                  </tr>
-                  <tr>
-                    <td>Undang-undang Nomor : 23 Tahun 2007 tentang Pembentukan Kabupaten sumba Tengah di Propinsi Nusa Tenggara Timur (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 5,Tambahan Lembaran Negara Republik Indonesia Nomor 4679);</td>
-                    <td>Keputusan bersama Menteri Agama Nomor : 182 Tahun 1982 dan Menteri Dalam Negeri Nomor : 44 A Tahun 1982 tentang usaha meningkatkan kemampuan baca tulis Al-Qur’an dalam kehidupan sehari-hari;</td>
-                    <td>3. </td>
-                  </tr>
-                </table>
-                  1. <div></div>
-              </div>
-              <div>CONTENT THREE</div>
-            </iron-pages>
-          </template>
+                  <paper-tabs selected="{{selected}}">
+                    <paper-tab name="1">Latar Belakang</paper-tab>
+                    <paper-tab name="2">Dasar Hukum</paper-tab>
+                    <paper-tab name="3">Tujuan</paper-tab>
+                    <paper-tab name="4">Nama dan Tema Kegiatan</paper-tab>
+                  </paper-tabs>
+                  <iron-pages selected="{{selected}}">
+                    <div id="1">
+                      <p>Musabaqah Tilawatil Qur’an atau lomba membaca Al-quran dengan lagu yang selama ini sudah dikenal. MTQ telah ada di Indonesia sejak tahun 1940-an sejak berdirinya Jami’iyyatul Qurro wal Huffadz yang didirikan oleh Nahdlatul Ulama, ormas terbesar di Indonesia.</p>
+                      <p>Sejak tahun 1968, saat Menteri Agama dihabat K.H. Muhammad Dahlan (salah seorang ketua Pengurus Besar Nahdlatul Ulama) MTQ dilembagakan secara nasional. MTQ pertama diselenggarakan di Makassar pada bulan Ramadan tahun 1968. Kala itu hanya melombagakan tilawah dewasa saja dan melahirkan Qari Ahmad Syahid dari Jawa Barat dan Muhammadong dari Sulawesi Selatan. MTQ kedua diselenggarakan di Banjarmasin tahun 1969. Tahun 1970 MTQ ketiga diselenggarakan di Jakarta dengan acara yang sangat meriah.</p>
+                      <p>Al-qur’an adalah wahyu Allah yang diturunkan kepada Nabi Muhammad SAW beserta umatnya dan merupakan bacaan utama bagi umat muslim di seluruh jagat raya. Al-Qur’an ini sebagai petunjuk bagi umat Islam dalam beribadah kepadaNya. Isi Al-Qur’an merupakan penyempurnaan wahyu Allah sebelumnya dimana isinya  menyangkut hubungan manusia dengan Allah, manusia dengan sesama manusia dan juga manusia dengan lingkungannya. Hal –hal mengenai tauhid, akidah, ahklak dan fikih semuanya terkandung dalam Al-qur’an.</p>
+                      <p>Al-qur’an adalah wahyu Allah yang diturunkan kepada Nabi Muhammad SAW beserta umatnya dan merupakan bacaan utama bagi umat muslim di seluruh jagat raya. Al-Qur’an ini sebagai petunjuk bagi umat Islam dalam beribadah kepadaNya. Isi Al-Qur’an merupakan penyempurnaan wahyu Allah sebelumnya dimana isinya  menyangkut hubungan manusia dengan Allah, manusia dengan sesama manusia dan juga manusia dengan lingkungannya. Hal –hal mengenai tauhid, akidah, ahklak dan fikih semuanya terkandung dalam Al-qur’an.</p>
+                    </div>
+                    <div id="2">
+                      <ol>
+                        <li>Undang-undang Nomor : 23 Tahun 2007 tentang Pembentukan Kabupaten sumba Tengah di Propinsi Nusa Tenggara Timur (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 5,Tambahan Lembaran Negara Republik Indonesia Nomor 4679);</li>
+                        <li>Keputusan bersama Menteri Agama Nomor : 182 Tahun 1982 dan Menteri Dalam Negeri Nomor : 44 A Tahun 1982 tentang usaha meningkatkan kemampuan baca tulis Al-Qur’an dalam kehidupan sehari-hari;</li>
+                        <li>Keputusan bersama Menteri Agama Nomor : 182 a Tahun 1988 dan Menteri Dalam Negeri Nomor : 48 Tahun 1988 tentang Pengembangan Tilawatil Qur’an;</li>
+                        <li>Keputusan Bupati Sumba Tengah Nomor : KEP/HK/80/2016 tentang Pembentukan Panitia Pelaksana Musabaqah Tilawatil Qur’an Kabupaten Sumba Tengah Tahun 2016</li>
+                      </ol>
+                    </div>
+                    <div id="3">
+                      <p>Tujuan dari penyelenggaraan kegiatan Mushabaqah Tilawatil Qur’an  ini, antara lain:</p>
+                      <ol>
+                        <li>Meningkatkan keimanan dan ketakwaan kepada Allah SWT</li>
+                        <li>Mengembangkan minat dan bakat seni baca Al-Qur’an</li>
+                        <li>Mempererat tali silaturahmi dikalangan umat dan membangun toleransi antar umat beragama</li>
+                        <li>Menyeleksi Qari, Qaiah terbaik untuk mengikuti Musabaqah Tilawatil Qur’an Tingkat Propinsi NTT di Kabupaten Ende</li>
+                      </ol>
+                    </div>
+                    <div id="4">
+                      <h2>Nama Kegiatan</h2>
+                      <p>“Mushabaqah Tilawatil Qur’an Tingkat Kabupaten Sumba Tengah”</p>
+                      <br>
+                      <h2>Tema Kegiatan</h2>
+                      <p>“Al-Qur’an sebagai pembentuk kepribadian mukmin sejati yang ikhlas membangun kerukunan”</p>
+                    </div>
+                  </iron-pages>
+                </template>
               </paper-material>
+
+              <script>
+                var t = document.querySelector('template');
+                t.selected = '1';
+                //t.manual = 'pages-a';
+              </script>
 
               <!--
               <paper-material elevation="1">
@@ -242,13 +262,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </div>
               </paper-material>-->
             </section>
+            <section data-route="jadwal" tabindex="-1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tabindex="-1">Jadwal Kegiatan</h1>
+                <div class="section" align="left" id="jadwal">
+                  <div itemscope itemtype="http://schema.org/Festival">
+                    <div itemprop="name"><h2>MTQ Sumba Tengah 2016</h2></div>
+                    <div itemprop="description">Mushabaqah Tilawatil Qur’an Tingkat Kabupaten Sumba Tengah Tahun 2016</div>
+                    <div><meta itemprop="startDate" content="2016-04-16">16 April 2016<meta itemprop="endDate" content="2016-04-17"> <i>sampai</i> 17 April 2016</div>
+                  </div>
+                  <br>
+                  <div itemscope itemtype="http://schema.org/Festival">
+                    <div itemprop="name"><h2>MTQ Sumba Tengah 2015</h2></div>
+                    <div itemprop="description">Mushabaqah Tilawatil Qur’an Tingkat Kabupaten Sumba Tengah Tahun 2016</div>
+                    <div><meta itemprop="startDate" content="2016-04-16">16 April 2015<meta itemprop="endDate" content="2016-04-17"> <i>sampai</i> 17 April 2015</div>
+                  </div>
+                </div>
+              </paper-material>
+            </section>
             <section data-route="lokasi" tabindex="-1">
               <paper-material elevation="1">
-                <h1 class="page-title" tabindex="-1">Lokasi</h1>
+                <h1 class="page-title" tabindex="-1">Lokasi MTQ Sumba Tengah</h1>
                 <div class="section" align="left" id="lokasi">
-                  <h2>Lokasi MTQ Sumba Tengah:</h2>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125945.03189024405!2d119.4658244701378!3d-9.440485728883322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x6b902ad5e2af1959!2sMusholla+An+Nur!5e0!3m2!1sen!2sid!4v1461491871986" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  </google-map>
+                  <h2>MTQ Sumba Tengah 2016:</h2>
+                  <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                    <div itemprop="streetAddress">Halaman Masjid Al-Jihad Mananga Kecamatan Mamboro Kabupaten Sumba  Tengah</div>
+                    <div><span itemprop="addressLocality">Sumba Tengah</span>, <span itemprop="addressRegion">Nusa Tenggara Timur</span></div><div itemprop="addressCountry">Indonesia</div>
+                  </div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.530257679627!2d119.4133185143485!3d-9.635652504356834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4ae1d5a909f68f%3A0x4d32ffab69add35f!2sMasjid+Al+Jihad!5e0!3m2!1sen!2sid!4v1461564981960" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
               </paper-material>
             </section>
