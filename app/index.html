@@ -57,6 +57,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
+  <style>
+    .paper-tabs {
+      color: #ffffff;
+      background-color: #3f51b5;
+    }
+  </style>
 </head>
 
 <body unresolved>
@@ -77,18 +83,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Drawer Content -->
         <paper-menu class="app-menu" attr-for-selected="data-route" selected="[[route]]">
-          <a data-route="home" href="{{baseUrl}}">
+          <a data-route="beranda" href="{{baseUrl}}">
             <iron-icon icon="home"></iron-icon>
             <span>Beranda</span>
           </a>
 
-          <a data-route="users" href="{{baseUrl}}users">
+          <a data-route="informasi" href="{{baseUrl}}informasi">
             <iron-icon icon="info"></iron-icon>
             <span>Informasi</span>
           </a>
 
-          <a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
+          <a data-route="lokasi" href="{{baseUrl}}lokasi">
+            <iron-icon icon="maps:place"></iron-icon>
+            <span>Lokasi</span>
+          </a>
+
+          <a data-route="kontak" href="{{baseUrl}}kontak">
+            <iron-icon icon="communication:contacts"></iron-icon>
             <span>Kontak</span>
           </a>
         </paper-menu>
@@ -103,7 +114,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span class="space"></span>
 
           <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
+          <paper-icon-button icon="refresh" onclick="location.reload()"></paper-icon-button>
           <paper-icon-button icon="search"></paper-icon-button>
 
           <!-- Application name -->
@@ -120,7 +131,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <!-- Main Content -->
         <div class="content">
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
-            <section data-route="home" tabindex="-1">
+            <section data-route="beranda" tabindex="-1">
               <!--
               <paper-material elevation="1">
                 <my-greeting></my-greeting>
@@ -175,25 +186,73 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
 -->
             </section>
-            <section data-route="users" tabindex="-1">
+
+            <section data-route="informasi" tabindex="-1">
               <paper-material elevation="1">
-                <h1 class="page-title" tabindex="-1">Users</h1>
-                <p>This is the users section</p>
-                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
-                <a href$="{{baseUrl}}users/Rob">Rob</a><br>
-                <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
-                <a href$="{{baseUrl}}users/Sam">Sam</a>
+                <template is="dom-bind">
+            <paper-tabs selected="{{selected}}" scrollable>
+              <paper-tab><h2>Tujuan</h2></paper-tab>
+              <paper-tab><h2>Latar Belakang</h2></paper-tab>
+              <paper-tab><h2>Dasar Hukum</h2></paper-tab>
+            </paper-tabs>
+            <iron-pages selected="{{selected}}">
+              <div>
+                <p>Musabaqah Tilawatil Qur’an atau lomba membaca Al-quran dengan lagu yang selama ini sudah dikenal. MTQ telah ada di Indonesia sejak tahun 1940-an sejak berdirinya Jami’iyyatul Qurro wal Huffadz yang didirikan oleh Nahdlatul Ulama, ormas terbesar di Indonesia.</p>
+                <p>Sejak tahun 1968, saat Menteri Agama dihabat K.H. Muhammad Dahlan (salah seorang ketua Pengurus Besar Nahdlatul Ulama) MTQ dilembagakan secara nasional. MTQ pertama diselenggarakan di Makassar pada bulan Ramadan tahun 1968. Kala itu hanya melombagakan tilawah dewasa saja dan melahirkan Qari Ahmad Syahid dari Jawa Barat dan Muhammadong dari Sulawesi Selatan. MTQ kedua diselenggarakan di Banjarmasin tahun 1969. Tahun 1970 MTQ ketiga diselenggarakan di Jakarta dengan acara yang sangat meriah.</p>
+                <p>Al-qur’an adalah wahyu Allah yang diturunkan kepada Nabi Muhammad SAW beserta umatnya dan merupakan bacaan utama bagi umat muslim di seluruh jagat raya. Al-Qur’an ini sebagai petunjuk bagi umat Islam dalam beribadah kepadaNya. Isi Al-Qur’an merupakan penyempurnaan wahyu Allah sebelumnya dimana isinya  menyangkut hubungan manusia dengan Allah, manusia dengan sesama manusia dan juga manusia dengan lingkungannya. Hal –hal mengenai tauhid, akidah, ahklak dan fikih semuanya terkandung dalam Al-qur’an.</p>
+                <p>Pada era globalisasi ini, Al-qur’an yang begitu indah bacaannya sudah mulai dilupakan orang, sekarang orang lebih memilih membaca buku ilmu pengetahuan modern atau novel daripada membaca Al-Qur’an. Globalisasi telah merubahgayahidup bangsa kita terutama generasi muda, maka Lembaga Pengembangan Tilawahtil Qur’an Kabupaten Sumba Tengah  ingin mengembalikangayahidup generasi muda kita untuk kembali memcintai Al-Qur’an dan tetap berpegang teguh padanya. Salah satu upaya yang dapat dilakukan  adalah melaksanakan  Musabaqah Tilawatil Qur’an.</p>
+              </div>
+              <div>
+                <table>
+                  <tr>
+                    <td>1. </td>
+                    <td>2. </td>
+                    <td>3. </td>
+                  </tr>
+                  <tr>
+                    <td>Undang-undang Nomor : 23 Tahun 2007 tentang Pembentukan Kabupaten sumba Tengah di Propinsi Nusa Tenggara Timur (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 5,Tambahan Lembaran Negara Republik Indonesia Nomor 4679);</td>
+                    <td>Keputusan bersama Menteri Agama Nomor : 182 Tahun 1982 dan Menteri Dalam Negeri Nomor : 44 A Tahun 1982 tentang usaha meningkatkan kemampuan baca tulis Al-Qur’an dalam kehidupan sehari-hari;</td>
+                    <td>3. </td>
+                  </tr>
+                </table>
+                  1. <div></div>
+              </div>
+              <div>CONTENT THREE</div>
+            </iron-pages>
+          </template>
+              </paper-material>
+
+              <!--
+              <paper-material elevation="1">
+                <h1 class="page-title" tabindex="-1">Latar Belakang MTQ Sumba Tengah</h1>
+                <div class="section" align="left" id="latar-belakang">
+                  <p>Musabaqah Tilawatil Qur’an atau lomba membaca Al-quran dengan lagu yang selama ini sudah dikenal. MTQ telah ada di Indonesia sejak tahun 1940-an sejak berdirinya Jami’iyyatul Qurro wal Huffadz yang didirikan oleh Nahdlatul Ulama, ormas terbesar di Indonesia.</p>
+                  <p>Sejak tahun 1968, saat Menteri Agama dihabat K.H. Muhammad Dahlan (salah seorang ketua Pengurus Besar Nahdlatul Ulama) MTQ dilembagakan secara nasional. MTQ pertama diselenggarakan di Makassar pada bulan Ramadan tahun 1968. Kala itu hanya melombagakan tilawah dewasa saja dan melahirkan Qari Ahmad Syahid dari Jawa Barat dan Muhammadong dari Sulawesi Selatan. MTQ kedua diselenggarakan di Banjarmasin tahun 1969. Tahun 1970 MTQ ketiga diselenggarakan di Jakarta dengan acara yang sangat meriah.</p>
+                  <p>Al-qur’an adalah wahyu Allah yang diturunkan kepada Nabi Muhammad SAW beserta umatnya dan merupakan bacaan utama bagi umat muslim di seluruh jagat raya. Al-Qur’an ini sebagai petunjuk bagi umat Islam dalam beribadah kepadaNya. Isi Al-Qur’an merupakan penyempurnaan wahyu Allah sebelumnya dimana isinya  menyangkut hubungan manusia dengan Allah, manusia dengan sesama manusia dan juga manusia dengan lingkungannya. Hal –hal mengenai tauhid, akidah, ahklak dan fikih semuanya terkandung dalam Al-qur’an.</p>
+                  <p>Pada era globalisasi ini, Al-qur’an yang begitu indah bacaannya sudah mulai dilupakan orang, sekarang orang lebih memilih membaca buku ilmu pengetahuan modern atau novel daripada membaca Al-Qur’an. Globalisasi telah merubahgayahidup bangsa kita terutama generasi muda, maka Lembaga Pengembangan Tilawahtil Qur’an Kabupaten Sumba Tengah  ingin mengembalikangayahidup generasi muda kita untuk kembali memcintai Al-Qur’an dan tetap berpegang teguh padanya. Salah satu upaya yang dapat dilakukan  adalah melaksanakan  Musabaqah Tilawatil Qur’an.</p>
+                </div>
+              </paper-material>
+              <paper-material elevation="1">
+                <h1 class="page-title" tabindex="-1">Dasar Hukum MTQ Sumba Tengah</h1>
+                <div class="section" align="left" id="dasar-hukum">
+                  <ol></p>
+                  <p>Sejak tahun 1968, saat Menteri Agama dihabat K.H. Muhammad Dahlan (salah seorang ketua Pengurus Besar Nahdlatul Ulama) MTQ dilembagakan secara nasional. MTQ pertama diselenggarakan di Makassar pada bulan Ramadan tahun 1968. Kala itu hanya melombagakan tilawah dewasa saja dan melahirkan Qari Ahmad Syahid dari Jawa Barat dan Muhammadong dari Sulawesi Selatan. MTQ kedua diselenggarakan di Banjarmasin tahun 1969. Tahun 1970 MTQ ketiga diselenggarakan di Jakarta dengan acara yang sangat meriah.</p>
+                  <p>Al-qur’an adalah wahyu Allah yang diturunkan kepada Nabi Muhammad SAW beserta umatnya dan merupakan bacaan utama bagi umat muslim di seluruh jagat raya. Al-Qur’an ini sebagai petunjuk bagi umat Islam dalam beribadah kepadaNya. Isi Al-Qur’an merupakan penyempurnaan wahyu Allah sebelumnya dimana isinya  menyangkut hubungan manusia dengan Allah, manusia dengan sesama manusia dan juga manusia dengan lingkungannya. Hal –hal mengenai tauhid, akidah, ahklak dan fikih semuanya terkandung dalam Al-qur’an.</p>
+                  <p>Pada era globalisasi ini, Al-qur’an yang begitu indah bacaannya sudah mulai dilupakan orang, sekarang orang lebih memilih membaca buku ilmu pengetahuan modern atau novel daripada membaca Al-Qur’an. Globalisasi telah merubahgayahidup bangsa kita terutama generasi muda, maka Lembaga Pengembangan Tilawahtil Qur’an Kabupaten Sumba Tengah  ingin mengembalikangayahidup generasi muda kita untuk kembali memcintai Al-Qur’an dan tetap berpegang teguh padanya. Salah satu upaya yang dapat dilakukan  adalah melaksanakan  Musabaqah Tilawatil Qur’an.</p>
+                </div>
+              </paper-material>-->
+            </section>
+            <section data-route="lokasi" tabindex="-1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tabindex="-1">Lokasi</h1>
+                <div class="section" align="left" id="lokasi">
+                  <h2>Lokasi MTQ Sumba Tengah:</h2>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125945.03189024405!2d119.4658244701378!3d-9.440485728883322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x6b902ad5e2af1959!2sMusholla+An+Nur!5e0!3m2!1sen!2sid!4v1461491871986" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </google-map>
+                </div>
               </paper-material>
             </section>
-
-            <section data-route="user-info" tabindex="-1">
-              <paper-material elevation="-1">
-                <h1 class="page-title" tabindex="-1">User: {{params.name}}</h1>
-                <div>This is {{params.name}}'s section</div>
-              </paper-material>
-            </section>
-
-            <section data-route="contact" tabindex="-1">
+            <section data-route="kontak" tabindex="-1">
               <paper-material elevation="1">
                 <h1 class="page-title" tabindex="-1">Kontak MTQ Sumba Tengah</h1>
                 <p>Hubungi MTQ Sumba Tengah melalui form berikut:</p>
@@ -207,7 +266,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </paper-scroll-header-panel>
     </paper-drawer-panel>
 <paper-toast id="toast" class="fit-bottom" text="Selamat datang di Website MTQ Sumba Tengah." opened duration="0">
-  <paper-icon-button onclick="toast.toggle()" icon="thumb-up"></paper-icon-button>
+  <p><i>Klik <paper-icon-button onclick="toast.toggle()" icon="thumb-up"></paper-icon-button> untuk menutupnya.</i></p>
 </paper-toast>
 <!--
     <paper-toast id="toast">

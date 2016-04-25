@@ -14,14 +14,14 @@ function ensureFiles(files, cb) {
     } catch (e) { }
 
     if (!fileFound) {
-      prev.push(filePath + ' Not Found');
+      prev.push(filePath + ' Tidak dapat ditemukan');
     }
 
     return prev;
   }, []);
 
   if (missingFiles.length) {
-    var err = new Error('Missing Required Files\n' + missingFiles.join('\n'));
+    var err = new Error('File yang dibutuhkan tidak ditemukan\n' + missingFiles.join('\n'));
   }
 
   if (cb) {
